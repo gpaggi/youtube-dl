@@ -1,7 +1,6 @@
 FROM alpine:latest
 
-RUN set -x \
- && apk add --no-cache ca-certificates curl ffmpeg python \
+RUN apk add --no-cache ca-certificates curl ffmpeg python \
  && curl -sLo /usr/local/bin/youtube-dl https://yt-dl.org/downloads/latest/youtube-dl \
  && chmod +x /usr/local/bin/youtube-dl \
  && apk del curl \
